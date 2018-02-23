@@ -7,6 +7,7 @@
 //
 
 #import "h1ViewController.h"
+#import "Masonry.h"
 
 @interface h1ViewController ()
 @end
@@ -21,8 +22,20 @@
     self.title = @"h1";
     
     self.view.backgroundColor = [UIColor yellowColor];
-    NSLog(_name);
+    [self addtxt];
     
+}
+
+-(void)addtxt {
+    UILabel *txt = [UILabel new];
+    [self.view addSubview:txt];
+    txt.text = _data[@"bride"];
+    txt.font = [UIFont boldSystemFontOfSize:18.0];
+    txt.textColor =  [UIColor colorWithRed:248/255. green:49/255. blue:48/255. alpha:1.0];
+    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(120);
+        make.left.mas_equalTo(120);
+    }];
 }
 
 

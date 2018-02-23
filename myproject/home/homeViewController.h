@@ -13,5 +13,5 @@
 @property (strong, nonatomic) UIButton *btn;
 @property (strong, nonatomic) vc *box;
 
-@property (nonatomic, copy) NSString *cont;
+@property (nonatomic, copy) NSDictionary *cont;
 @end

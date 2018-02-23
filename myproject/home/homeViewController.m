@@ -8,6 +8,8 @@
 
 #import "homeViewController.h"
 #import "h1ViewController.h"
+#import "dataModel.h"
+
 #import "AFNetworking.h"
 #import "MJExtension.h"
 
@@ -45,9 +47,12 @@
     [[AFHTTPSessionManager manager] POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         NSLog(@"downloadProgress-->%@",uploadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = (NSDictionary *)responseObject;
-        _cont = dic[@"groom"];
-        NSLog(_cont);
+        _cont = (NSDictionary *)responseObject;
+        
+        NSString *name = _cont[@"groom"];
+        
+        NSLog(name);
+        
         //NSLog(@"responseObject-->%@",responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -58,7 +63,7 @@
 
 - (void)h1Win:(id)sender {
     h1ViewController *box = [h1ViewController new];
-    box.name = _cont;
+    box.data = _cont;
     [self.navigationController pushViewController:box animated:true];
 }
 

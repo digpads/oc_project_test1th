@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface brideViewController : UIViewController
+@property (nonatomic, copy) NSDictionary *data;
+@property (nonatomic, copy) NSArray *list;
+@property (nonatomic,strong) UITableView *tableView;
 
 @end

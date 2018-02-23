@@ -10,4 +10,5 @@
 
 @interface h1ViewController : UIViewController
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSDictionary *data;
 @end
