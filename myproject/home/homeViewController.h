@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class vc;
 @interface homeViewController : UIViewController
 
 @property (strong, nonatomic) UIButton *btn;
-@property (strong, nonatomic) vc *box;
 
 @property (nonatomic, copy) NSDictionary *cont;
+
+
 @end

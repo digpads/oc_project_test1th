@@ -1,45 +1,46 @@
 //
-//  h1ViewController.m
+//  infoVc.m
 //  myproject
 //
-//  Created by 何明礼 on 2018/2/22.
+//  Created by 何明礼 on 2018/2/26.
 //  Copyright © 2018年 何明礼. All rights reserved.
 //
 
-#import "h1ViewController.h"
+#import "infoVc.h"
 #import "Masonry.h"
 
-@interface h1ViewController ()
+@interface infoVc ()
+@property (nonatomic,strong) UILabel *titLabel;
 @end
 
-@implementation h1ViewController
-
+@implementation infoVc
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
-    self.title = @"h1";
-    
+    self.title = @"套餐详情";
     self.view.backgroundColor = [UIColor yellowColor];
-    [self addtxt];
+    
+    [self info];
     
 }
 
--(void)addtxt {
-    UILabel *txt = [UILabel new];
-    [self.view addSubview:txt];
-    //txt.text = _data[@"bride"];
-    //txt.text = [NSString stringWithFormat:@"%ld", _name];
-    txt.text = _name;
-    txt.font = [UIFont boldSystemFontOfSize:18.0];
-    txt.textColor =  [UIColor colorWithRed:248/255. green:49/255. blue:48/255. alpha:1.0];
-    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)info {
+    
+    _titLabel = [UILabel new];
+    _titLabel.text = _tit;
+    _titLabel.font = [UIFont boldSystemFontOfSize:16];
+    _titLabel.textColor = [UIColor grayColor];
+    [self.view addSubview:_titLabel];
+    [_titLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(120);
-        make.left.mas_equalTo(120);
+        make.centerX.mas_equalTo(0);
     }];
+    
 }
+
+
 
 
 
@@ -47,6 +48,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
 
 /*
 #pragma mark - Navigation

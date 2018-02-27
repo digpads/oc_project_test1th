@@ -31,7 +31,7 @@
       
         
         self.cellImage = [UIImageView new];
-        self.cellImage.image = [UIImage imageNamed:@"t1"];
+        self.cellImage.image = [UIImage imageNamed:@"img1"];
         [self addSubview:self.cellImage];
         [self.cellImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(0);

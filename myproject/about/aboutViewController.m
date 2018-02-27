@@ -18,8 +18,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"关于我们";
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    
+    
     self.view.backgroundColor = [UIColor colorWithRed:248/255. green:145/255. blue:25/255. alpha:1.0];
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if([UIApplication sharedApplication].statusBarStyle!=0){
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    }
+    NSLog(@"about状态栏：%d",[UIApplication sharedApplication].statusBarStyle);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -25,8 +25,18 @@
     [self main];
     
     self.navigationController.delegate = self;
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if([UIApplication sharedApplication].statusBarStyle!=0){
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    }
+    NSLog(@"wedding状态栏：%ld",[UIApplication sharedApplication].statusBarStyle);
+}
 
 - (void)main {
     CGFloat width=self.view.frame.size.width;
@@ -38,7 +48,7 @@
     
     [self.view addSubview:tableView];
     tableView.backgroundColor = [UIColor whiteColor];
-    self.navigationController.hidesBarsOnSwipe = YES;
+    //self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 

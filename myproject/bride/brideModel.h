@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface brideModel : NSObject
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *city;
-@property (nonatomic, copy) NSString *area;
-@property (nonatomic, copy) NSString *time;
+@property (nonatomic, copy) NSString *work_id;
+@property (nonatomic, copy) NSString *work_describe;
+@property (nonatomic, copy) NSString *work_cover_path;
+@property (nonatomic, copy) NSString *work_title;
+@property (nonatomic, copy) NSString *work_actual_price;
+@property (nonatomic, copy) NSString *work_market_price;
+@property (nonatomic, copy) NSString *work_city;
+
+
 
 @end

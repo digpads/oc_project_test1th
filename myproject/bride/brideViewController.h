@@ -10,7 +10,7 @@
 
 @interface brideViewController : UIViewController
 @property (nonatomic, copy) NSDictionary *data;
-@property (nonatomic, copy) NSArray *list;
+@property (nonatomic, strong) NSMutableArray *list;
 @property (nonatomic,strong) UITableView *tableView;
 
 @end
